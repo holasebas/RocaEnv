@@ -14,77 +14,57 @@
 
     <div class="container">
 
-        <div class="title">DIRECTORIOS Y ARCHIVOS</div>
-        <div class="text">Minusculas sin acentos, ñ's o culaquier otro caracter especial. </div>
-
-        <ol>
-            <li>...</li>
-            <li>public</li>
+        <div class="my-5">
+            <ol>
+                <li><a href="#a">HTML Y CSS ARQUITECTURA</a></li>
                 <ol>
-                    <li>js</li>
-                    <li>css</li>
-                    <li>assets</li>
-                    <li> ... </li>
-                </ol>
-            <li>src</li>
-                <ol>
-                    <li>components</li>
-                    <li>views</li>
-                    <li>context</li>
-                    <li>services</li>
-                    <li>utils</li>
-                    <li>styles</li>
-                    <li> ... </li>
-                </ol>
-            <li> ... </li>
-        </ol>
-
-        <div  class="text">Minusculas en español sin acentos, ñ's o cualquier otro caracter especial divido por un "_ " seguido del nombre correppondiente a su folder o funcion en ingles. </div>
-
-
-        <ol>
-            <li>src</li>
-                <ol>
-                    <li>components</li>
-                        <ol>
-                            <li>carrito_component.js</li>
-                        </ol>
-                    <li>views</li>
+                    <li><a href="#b">HTML LAYOUT</a></li>
+                    <li><a href="#c">CSS LAYOUT CEM (Componente Elemento Modificador)</a></li>
                     <ol>
-                        <li>perfil_view.js</li>
+                        <li><a href="#d">Componente</a></li>
+                        <li><a href="#e">Elemento</a></li>
+                        <li><a href="#f">Modificador</a></li>
+                        <li><a href="#g">Utilerias</a></li>
+                     
                     </ol>
-                    <li>context</li>
-                        <ol>
-                            <li>usuario_context.js</li>
-                        </ol>
-                    <li>services</li>
-                        <ol>
-                            <li>api_service.js</li>
-                        </ol>
-                    <li>utils</li>
-                        <ol>
-                            <li>general_utils.js</li>
-                        </ol>
-                    <li> ... </li>
+                  
+                    <li><a href="#h">LAYOUT VS CEM</a></li>
+                    <li><a href="#i">UI/COMPONENT GLOSARY</a></li>
+                    <li><a href="#j">RESPONSIVE BREAKPOINTS</a></li>
+                    <li><a href="#k">......</a></li>
+
                 </ol>
-            <li> ... </li>
-        </ol>
-        <div class="title">DEPENDENCIAS Y LIBRERIAS</div>
-        <ol>
-            <li>Bootstrap</li>
-            <li>React Router Dom</li>
-            <li>React Icons</li>
-        </ol>
+                <li><a href="#l">REACT ARQUITECTURA</a></li>
+                <ol>
+                    <li><a href="#m">DIRECTORIOS Y ARCHIVOS</a></li>
+                    <li><a href="#n">DEPENDENCIAS Y LIBRERIAS</a></li>
+                    <li><a href="#o">ARQUITECTURA BASE PARA PROYTECTOS REACT</a></li>
+                    <ol>
+                        <li><a href="#p">BOOTSTRAP PUBLIC SETUP</a></li>
+                        <li><a href="#q">SINGLE PAGE APLICATION</a></li>
+                        <li><a href="#r">PROVEDOR DE ESTADO</a></li>
 
-        
+                    </ol>
+                    <li><a href="#s">Relación ARCHIVO-COMPONENTE</a></li>
+                    <li><a href="#t">Services</a></li>
+                 
+                </ol>
 
-        <div class="title">HTML LAYOUT</div>
+              
+            </ol>
+        </div>
+
+      
+  
+        <div class="title" id="a">HTML Y CSS ARQUITECTURA</div>
+        <hr>
+        <div class="title" id="b">HTML LAYOUT</div>
         <div>Flex y Grid Bootstrap utilerias</div>
         <div>Indispensable uso de otras clases de utileria</div>
 
-        <div class="title">CSS LAYOUT CEM (Componente Elemento Modificador)</div>
-        <div class="subtitle">Componente</div>
-        <div class="text" >En el sigueinte codigo HTML se define un componente al que se nombrara "lego" el nombrado CSS para los componentes dentro del layout sera en minusculas, sin ñ´s, carcteres especiales, espacios, guiones y guines bajos. es uso de Camel Case es opcional (miComponente)</div>
+        <div class="title" id="c"> CEM (Componente Elemento Modificador)</div>
+        <div class="subtitle" id="d">Componente</div>
+        <div class="text" >En el sigueinte codigo HTML se define un componente conformado por elementos al que se nombro "lego". El nombrado CSS para los componentes dentro del layout debe ser en minusculas, sin ñ´s, carcteres especiales, espacios, guiones y guines bajos. el uso de CamelCase es opcional (miComponente)</div>
 
         <div class="contianer d-flex flex-row border">
 
@@ -92,7 +72,11 @@
                 
                <pre>
                 <code>
-&lt;div class="<strong>lego</strong>"&gt;&lt;/div&gt;
+&lt;div class="<strong>lego</strong>"&gt;
+    &lt;div class="<strong>lego_head</strong>"&gt;
+    &lt;div class="<strong>lego_body</strong>"&gt;
+    &lt;div class="<strong>lego_legs</strong>"&gt;
+&lt;/div&gt;
                 </code>
                </pre>
                 
@@ -108,7 +92,7 @@
             </div>
             
         </div>
-        <div class="subtitle">Elemento:</div>
+        <div class="subtitle" id="e">Elemento:</div>
         <div class="text" >
             A su vez el componente <strong>"lego" </strong> cuenta con elementos que lo conforman "head", "body" y "legs". Los <strong>Elementos</strong> cuentan con las mismas reglas de nombrado que los componentes. Sin embargo los elementos cuentan con un carateristica diferente la cual es; le prescede el nombre del componente al que pertenece en este caso es <strong>"lego"</strong> y sus elemetos seran separado exclusivamente por un guion bajo (_) <strong>lego_head</strong>
         </div>
@@ -186,7 +170,7 @@
             
         </div>
 
-        <div class="subtitle">Modificador:</div>
+        <div class="subtitle" id="f">Modificador:</div>
         <div class="text" >Un componente tanto un elemento pueden contar con modificadores enlcual como su nombre lo indica modifica cierta propiedad, estos modificadores cuentan con las mismas caracteristicas de nombrado que un componente o elemento con su diferencia de que le prescede el nombre del componente o elemento al cual esta modificado seguido de doble guio (--)  <strong>logo_head--fireman</strong> </div>
 
         <div class="contianer d-flex flex-row border">
@@ -267,7 +251,7 @@
             </div>
         </div>
 
-        <div class="title">Utilerias</div>
+        <div class="title" id="g">Utilerias</div>
         <div class="text" >Componentes y Elementos tambien pueden estar conformados por utilirias, con las mismas carateristicas de nombrado; (<i>minusculas, sin acentos sin ñ's o cualquier otro caracter especial</i>) estas utilerias seran nombradas bajo el mismo esquema de <strong>Bootstrap (<i>mx-auto, p-1, text-center etc.</i>)</strong> name-name. <strong>Ej. bg-tomato</strong> el cual cambia el color del background de un componente o elemento, <br><br> <strong>Nota: </strong>  esta propiedad que defininos como "bg-tomato" es una utileria no un modificador y hay que saber identificar una de otra y cuando deberia definir una utileria y cuando un modificador. Dendera de las carateristica de nuestro componente. </div>
 
         <div class="contianer d-flex flex-row border">
@@ -297,15 +281,15 @@ bg-tomato{
                 </div>
             </div>
         </div>
-        <div class="title">Resumen </div>
+        <div class="title">RESUMEN </div>
         <div>
             <strong>componente</strong>: todo aquel nombrado que no contenga ningun tipo de guion o espaciado es un <strong>componente</strong>. <br>
             <strong>${componente}_elemento</strong>: todo aquel nombrado que  separado por un guion (_) es un <strong>elemeto</strong> <br>
             <strong>${elemento o componente} --elemento</strong>: todo aquel nombrado separado por doble guion(--) es un <strong>modificador</strong> de determinado componente o elemento <br>
             <strong>nombre-nombre</strong>: todo aquel nombrado  separado por un guion simple(-) es una <strong>utileria</strong> <br>
         </div>
-        <div class="title"> Nota: ¡IMPORTANTE!</div>
-        <div class="text">El etiquetado y nombrado de un componente es es independiene al etiquetado del layout; es decir el maquetado por lo general es construido con base utilerias, mayormente todas provendran de <strong>Bootsrap</strong></div>
+        <div class="title" id="h">LAYOUT VS CEM</div>
+        <div class="text">El Maquetado(layout) y nombrado de clases (CEM) son independientes y nada tienen que ver uno de otro, es decir; el maquetado por lo general es construido con base utilerias, mayormente todas provendran de <strong>Bootsrap</strong> mientras que el nombrado de componentes es con base a CEM + utilirias que pueden ser propias o provenientes de bootstrap</div>
 
         <div class="subtitle text-red">MAL</div>
         <div class="contianer d-flex flex-row border">
@@ -318,8 +302,8 @@ bg-tomato{
 } 
 
 &lt;div class="contenedorPerfil"&gt;
-    &lt;div class="contenedorPerfil_caja"&gt;Componente&lt;/div&gt;
-    &lt;div class="contenedorPerfil_caja"&gt;Componente&lt;/div&gt;
+    &lt;div class="contenedorPerfil_caja"&gt;CEMcomponent&lt;/div&gt;
+    &lt;div class="contenedorPerfil_caja"&gt;CEMcomponent&lt;/div&gt;
 &lt;/div&gt;
 
                     </code>
@@ -331,8 +315,8 @@ bg-tomato{
             <div class="col d-flex justify-content-center align-items-center border">
 
                 <div class="d-flex flex-row w-100 p-3">
-                    <div class="col border">Componente</div>
-                    <div class="col border">Componente</div>
+                    <div class="col border">CEMcomponent</div>
+                    <div class="col border">CEMcomponent</div>
                 </div>
 
             </div>
@@ -346,8 +330,8 @@ bg-tomato{
                     <code>
 
 &lt;div class="d-flex flex-row"&gt;
-    &lt;div class="col">Componente&gt;&lt;/div&gt;
-    &lt;div class="col">Componente&gt;&lt;/div&gt;
+    &lt;div class="col">CEMcomponent&gt;&lt;/div&gt;
+    &lt;div class="col">CEMcomponent&gt;&lt;/div&gt;
 &lt;/div&gt;
 
                     </code>
@@ -356,8 +340,8 @@ bg-tomato{
             <div class="col d-flex justify-content-center align-items-center border">
 
                 <div class="d-flex flex-row w-100 p-3">
-                    <div class="col border">Componente</div>
-                    <div class="col border">Componente</div>
+                    <div class="col border">CEMcomponent</div>
+                    <div class="col border">CEMcomponent</div>
                 </div>
 
             </div>
@@ -365,7 +349,7 @@ bg-tomato{
 
 
 
-        <div class="title">CASO DE USO (CEM) </div>
+        <div class="title">CASO DE USO CEM + Bootstrap layout </div>
 
                 <div class="contianer d-flex flex-row border">
             <div class="col d-flex justify-content-center align-items-center">
@@ -433,9 +417,41 @@ bg-tomato{
 
             </div>
         </div>
+        <div class="title"><strong>NOTA:</strong> El nombrado de los modificadores son en relación a la caracteristica que modifica, no con base a su funcionalidad.</div> <br>
+
+        <div class="text-red">cta--cerrarsesion</div>
+        <div class="text-green">cta--red</div>
+
+        <div class="title" id="i">UI/COMPONENT GLOSARY</div>
+        <div>Dentro de cada proyecto es estrictamente necesario, tener un UI glosary, que en pocas palabras es lo equivalente a un APIdoc en el Front-End. UI glosary es una vista o ruta privada <strong>uiglosary_view</strong> que contiene el listadado de todo componente o elemento con cada uno de sus respectivos modificadores hayan sido definidos el proyecto.  </div>
+
+        <pre>
+            <code>
+    function UIGlosaryView(){
+        return(
+            &lt;div class="cta"&gt;&lt;/div&gt;
+            &lt;div class="cta cta--primary"&gt;&lt;/div&gt;
+            &lt;div class="cta cta--big"&gt;&lt;/div&gt;
+            &lt;div class="cta cta--big cta--primary"&gt;&lt;/div&gt;
+            &lt;CardComponent /&gt;
+            &lt;OtroReactComponent /&gt;
+        )
+    }
+            </code>
+        </pre>
+
+        <div>La principal utilidad del UI glosary es poder tener un panorama general de la aplicacion en cuanto a Componentes y CSS, es decir; si tengo un requerimiento el cual podria ser: <br><br>
+
+        <i>"El boton de 'comprar ahora' debe estar brincando."</i> <br><br>
+
+        Dado el requerimiento anterior, partiriamos desde el UIGlosary y ver si existe ya un modificador que cumpla con el requerimiento, o crearlo en caso de no haberlo, esto para seguir con el patron CEM y evitar malas practicas o redundancia en nuestra hoja de estilos, <strong>cta--bounce</strong> el cual modificara el comportamiento de nuestro componente <strong>cta</strong>. 
+
+
+
+
         
-        <div class="title">RESPONSIVE BREAKPOINTS</div>
-    <div class="text">Los siguientes breakpoints son estrictamente requeridos y en ese mismo orden, junto con algun otro que sea necesario definir en el orden jerarquico correspondiente <strong>Ej.</strong> si se require definir un brekpoint de 340px quedaria colocado debajo del de 576px. Estos breakpoints llevan una relacion 1:1 con las utilirias de layout de Bootstrap lo cual nos permite llevar una sincronia entre los estilados y el maquetado siguiendo el esquema de cascada de css; es decir las propiedades definidas en cada brekpoint no se correran hasta que sus breakpoint anterior hayan sido alcanzados. </div>
+        <div class="title" id="j">RESPONSIVE BREAKPOINTS</div>
+    <div class="text">Los siguientes breakpoints son estrictamente requeridos y en ese mismo orden, junto con algun otro que sea necesario definir en el orden jerarquico correspondiente <strong>Ej.</strong> si se require definir un brekpoint de 340px quedaria colocado debajo del de 576px. Estos breakpoints llevan una relacion 1:1 con las utilirias de layout de Bootstrap lo cual nos permite llevar una sincronia entre estilos y layout siguiendo el esquema de cascada de css; es decir las propiedades definidas en cada brekpoint no ocurriran hasta que el breakpoint hayan sido alcanzado.  </div>
         <pre>
             <code>
 @media (max-width: 1200px) { ...dispositvos extra largos }
@@ -445,18 +461,177 @@ bg-tomato{
 @media (max-width: 768px) { ...dispositvos medianos }
 
 @media (max-width: 576px) { ...dispositvos pequeños }
-
-                
             </code>
         </pre>
+        <div class="title" id="l">REACT ARQUITECTURA</div>
+        <hr>
 
-        <div class="title">ARQUITECTURA BASE PARA PROYTECTO REACT</div>
+        <div class="title" id="m">DIRECTORIOS Y ARCHIVOS</div>
+        <div class="text">Minusculas sin acentos, ñ's o culaquier otro caracter especial. </div>
+        
+
         <ol>
-            <li>SINGLE PAGE APLICATION (ROUTER ROUTE BASED)</li>
-            <li>MANEJO DE ESTADO (CONTEXT BASE)</li>
-            <li>BOOTSTRAP SETUP</li>
-            <div></div>
+            <li>...</li>
+            <li>public</li>
+                <ol>
+                    <li>js</li>
+                    <li>css</li>
+                    <li>assets</li>
+                    <li> ... </li>
+                </ol>
+            <li>src</li>
+                <ol>
+                    <li>components</li>
+                    <li>views</li>
+                    <li>context</li>
+                    <li>services</li>
+                    <li>utils</li>
+                    <li>styles</li>
+                    <li> ... </li>
+                </ol>
+            <li> ... </li>
         </ol>
+
+        <div  class="text">Minusculas en español sin acentos, ñ's o cualquier otro caracter especial divido por un "_ " seguido del nombre correppondiente a su folder o funcion en ingles. </div>
+
+
+        <ol>
+            <li>src</li>
+                <ol>
+                    <li>components</li>
+                        <ol>
+                            <li>carrito_component.js</li>
+                        </ol>
+                    <li>views</li>
+                    <ol>
+                        <li>perfil_view.js</li>
+                    </ol>
+                    <li>context</li>
+                        <ol>
+                            <li>usuario_context.js</li>
+                        </ol>
+                    <li>services</li>
+                        <ol>
+                            <li>api_service.js</li>
+                        </ol>
+                    <li>utils</li>
+                        <ol>
+                            <li>general_utils.js</li>
+                        </ol>
+                    <li> ... </li>
+                </ol>
+            <li> ... </li>
+        </ol>
+        <div class="title" id="n">DEPENDENCIAS Y LIBRERIAS</div><br>
+        <ol>
+            <li>Bootstrap <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Docs</a></li>
+            <li>React Router Dom <a href="https://v5.reactrouter.com/web/guides/quick-start">Docs</a></li>
+            <li>React Icons <a href="https://react-icons.github.io/react-icons/">Docs</a></li>
+        </ol>
+
+
+        <div class="title" id="o">ARQUITECTURA BASE PARA PROYTECTOS REACT</div><br>
+        <ol>
+            <li id="p">BOOTSTRAP PUBLIC SETUP (public/index.html) <a href="https://getbootstrap.com/docs/5.1/examples/sticky-footer/">Docs</a></li>
+            <pre>
+                <code>
+&lt;html lang="en" class="h-100"&gt;
+    ...
+    &lt;body class="h-100"&gt;
+        ...
+        &lt;div id="root" class="h-100"&gt;&lt;/div&gt;
+            ...
+                </code>
+            </pre>
+            <li id="q">SINGLE PAGE APLICATION (ROUTER BASED)</li>
+            <ol>
+                <li>PUBLIC ROUTES</li>
+                <pre>
+                    <code>
+&lt;Route /&gt;
+    &lt;LoginView /&gt;
+&lt;Route /&gt;
+                    </code>
+                </pre>
+                <li>PRIVATE ROUTES</li>
+                <pre>
+                    <code>
+&lt;PrivateRoute /&gt;
+    &lt;HomeView /&gt;
+&lt;PrivateRoute /&gt;
+
+function <strong>PrivateRoute</strong>({<strong>children</strong>})<strong>{</strong>
+    if(//EXISTE TOKE DE USUARIO VALIDO){
+        return (
+        &lt;Route /&gt;
+           {<strong>children</strong>}
+        &lt;Route /&gt;
+        )
+    }else{
+        REDIRECT TO  "/" o "Login"
+    }
+  
+<strong>}</strong>
+                    </code>
+                </pre>
+                
+            </ol>
+            <li id="r">PROVEDOR DE ESTADO (CONTEXT, PROVIDER)</li>
+            <br>
+            <ol>
+                <li><strong>GlobalContext</strong></li>
+                <div class="mb-3">Contexto global que se encarga de proveer el estado global de la aplicación que pueda ser consumido desde cualquiero componente o vista. Ej. datos de usuario logueado, alertas o notiicaciones </div>
+                <li><strong>{Module}Context</strong></li>
+                <div class="mb-3">Contexto de modulo que se encarga de proveer el estado de un modulo a todas las vistas o componentes hijos que lo conformen. </div>
+                <li><strong>LocalContext</strong></li>
+                <div class="mb-3">Contexto local que se encarga de manejar es estado de un solo componente de forma interna</div>
+                
+            </ol>
+
+            <li id="s">Relación ARCHIVO-COMPONENTE</li>
+
+            <ol>
+                <li> <strong>ARCHIVO:</strong></li>
+                <ol>
+                    <li>login_view.js</li>
+                    <li>card_component.js</li>
+                    <li>contactos_context.js</li>
+                    <li>...</li>
+                    <li>..</li>
+                    <li>.</li>
+                </ol>
+            
+                
+                <li> <strong>COMPONENTE: </strong> </li>
+                <ol>
+                    <li>function LoginView(){}</li>
+                    <li>function CardComponent(){}</li>
+                    <li>function ContactosContext(){}</li>
+                    <li>...</li>
+                    <li>..</li>
+                    <li>.</li>
+                </ol>
+              
+
+            </ol>
+
+            <li id="t">SERVICES</li>
+            <ol>
+                <li>SINGLE SERVICE (firebase_service.js)</li>
+                <li>DYNAMIC SERVICE (myapi_service.js)</li>
+                <li>DYNAMIC SERVICE (microservice_service.js)</li>
+                <li>...</li>
+                <li>..</li>
+                <li>.</li>
+            </ol>
+
+          
+         
+        </ol>
+</div>
+
+<div class="my-3">
+    .......
 </div>
 
 
